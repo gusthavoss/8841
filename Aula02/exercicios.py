@@ -1,3 +1,5 @@
+import os
+
 # 4) Escreva em script em Python que represente uma quitanda. O seu script deverá apresentar
 # opções de frutas, e cada vez que voce escolher a fruta desejada, a fruta deverá ser
 # adicionada a uma cesta de compras.
@@ -62,11 +64,20 @@ while opcao < 3:
     opcao = int(input("Menu Principal:\n\n1: Ver cesta\n2: Adicionar uma fruta\n3: Sair\n"))
 
     if opcao == 1:
+        if os.name == "nt":
+                os.system("cls")
+        else:
+                os.system("clear")
         print(cesta)
         print(f"Total: {cesta_pre}")
     
 
-    if opcao == 2:
+    elif opcao == 2:
+        if os.name == "nt":
+             os.system("cls")
+        else:
+                os.system("clear")
+
         fruta = int(input("Menu de frutas:\nDigite a opção que deseja adicionar:\n1 - Banana\n2 - Melancia\n3 - Morango\n"))
         
         if fruta == 1:
