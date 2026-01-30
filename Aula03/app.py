@@ -1,33 +1,33 @@
+# Funções
+# Trechos de código que podem ser re-utilizados diversas vezes durante a extenção do seu script sem a necessidade de repetir todo o código.
 
+import os
 
+def limpa_tela():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
 
+limpa_tela()
 
+# Criar uma função que recebe um parâmetro:
 
+def saudacao(nome):
+    print(f"Prazer em conhecê-lo, {nome}!")
 
+saudacao("Tiago")
+saudacao("Caio")
+saudacao("Kaique")
 
+pessoa = input("Qual é o seu nome? ")
+saudacao(pessoa)
 
+# Criar funções com multiplos parâmetros:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def soma(x, y):
+    resultado = x + y
+    print(f"O resultado de {x} + {y} é {resultado}")
 
 # soma(4,23)
 # soma(7,11)
