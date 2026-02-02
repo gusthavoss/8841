@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS comida (
 id integer primary key autoincrement, 
 nome text, 
 preco float,
-quantidade intager
+quantidade integer
 )"""
 
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS bebida (
 id integer primary key autoincrement, 
 nome text, 
 preco float,
-quantidade intager
+quantidade integer
 )"""
 
 cursor.execute(comando_cria_tabela_comida)
@@ -108,7 +108,7 @@ while opcao != 4:
             print(cursor.execute(comando_checa_tabela))
             
             comida = int(input("O que vai querer: "))
-            comando_checa_tabela = f"SELECT quantidade FROM bebida WHERE id = {bebida}"
+            comando_checa_tabela = f"SELECT quantidade FROM bebida WHERE id = {comida}"
             if cursor.execute(comando_checa_tabela) == 0:
                 print("item indisponível")
             else:  
