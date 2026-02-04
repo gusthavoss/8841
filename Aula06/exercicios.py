@@ -8,9 +8,14 @@
 # - No fim, simule 30 clientes chegando um após o outro na lanchonete.
 
 import sqlite3
+import random
 
 conexao = sqlite3.connect("empresa.db") 
 cursor = conexao.cursor()               
+
+def cliente():
+    coleta_comidas = "SELECT nome FROM comidas"
+    
 
 comando_cria_tabela_comida = """
 CREATE TABLE IF NOT EXISTS comida (
